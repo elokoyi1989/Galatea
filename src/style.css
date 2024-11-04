@@ -1,0 +1,77 @@
+/* style.css */
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #000000; /* Black background */
+  color: #00ff00; /* Neon green text */
+}
+
+#game-container {
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #000000; /* Match background */
+}
+
+#story {
+  color: #00ff00; /* Neon green text */
+  white-space: pre-wrap; /* Preserve spaces and line breaks */
+  min-height: 100px; /* Ensure space for the typing effect */
+}
+
+#choices {
+  margin-top: 20px;
+}
+
+#choices button {
+  display: block;
+  margin: 10px 0;
+  background-color: transparent;
+  border: 1px solid #00ff00;
+  color: #ffffff; /* White text */
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#choices button:hover {
+  background-color: #00ff00;
+  color: #000000;
+}
+
+/* Cursor effect */
+#story::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  background-color: #00ff00;
+  margin-left: 5px;
+  animation: blink 1s step-start 0s infinite;
+}
+
+/* Flash animation */
+@keyframes flashScreen {
+  0% {
+    background-color: #000000; /* Original background color */
+  }
+  20% {
+    background-color: #f92525; /* Flash color (e.g., red) */
+  }
+  100% {
+    background-color: #f92525; /* Original background color */
+  }
+}
+
+.flash {
+  animation: flashScreen 3s; /* Duration of the flash */
+}
+
+@keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
+
+.no-cursor::after {
+  display: none;
+}
