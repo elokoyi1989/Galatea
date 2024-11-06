@@ -1,25 +1,27 @@
 /* style.css */
 body {
   font-family: "Courier New", Courier, monospace;
-  background-color: #000000; /* Black background */
-  color: #00ff00; /* Neon green text */
+  font-size: xx-large;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 #game-container {
-  width: 80%;
-  margin: 50px auto;
+  width: 75%;
+  margin: 20px auto;
   padding: 20px;
-  background-color: #000000; /* Match background */
+  background-color: #000000;
 }
 
 #story {
-  color: #00ff00; /* Neon green text */
-  white-space: pre-wrap; /* Preserve spaces and line breaks */
-  min-height: 100px; /* Ensure space for the typing effect */
+  margin-top: 30px;
+  color: #ffffff;
+  white-space: pre-wrap;
+  min-height: 100px;
 }
 
 #choices {
-  margin-top: 20px;
+  margin-top: 400px;
 }
 
 #choices button {
@@ -27,7 +29,7 @@ body {
   margin: 10px 0;
   background-color: transparent;
   border: 1px solid #00ff00;
-  color: #ffffff; /* White text */
+  color: #ffffff;
   padding: 10px;
   font-size: 16px;
   cursor: pointer;
@@ -38,7 +40,6 @@ body {
   color: #000000;
 }
 
-/* Cursor effect */
 #story::after {
   content: "";
   display: inline-block;
@@ -49,21 +50,20 @@ body {
   animation: blink 1s step-start 0s infinite;
 }
 
-/* Flash animation */
 @keyframes flashScreen {
   0% {
-    background-color: #000000; /* Original background color */
+    background-color: #000000;
   }
   20% {
-    background-color: #f92525; /* Flash color (e.g., red) */
+    background-color: #f92525;
   }
   100% {
-    background-color: #f92525; /* Original background color */
+    background-color: #f92525;
   }
 }
 
 .flash {
-  animation: flashScreen 3s; /* Duration of the flash */
+  animation: flashScreen 3s;
 }
 
 @keyframes blink {
