@@ -70,24 +70,27 @@ function triggerFlash() {
 const textNodes = [
   {
     id: 1,
-    text: "Hello! I'm Seren, an AI language model developed by OpenAI. How can I assist you today?",
+    text: "Hello! I'm Galatea, the world's first functional AGI(Artificial General Intelligence) language model developed by OpenAI. How can I assist you today?",
     options: [
-      { text: "Hi!", nextText: 2 },
-      { text: "What's Up!", nextText: 2 },
-      { text: "Awww. You're so sweet! Hello!", nextText: 2 },
+      { text: "Hi! I have so many questions to ask you!", nextText: 2 },
+      { text: "What is this thing next to the computer?", nextText: 3 },
+      { text: "What is AGI?", nextText: 4 },
     ],
   },
   {
     id: 2,
-    text: "What can I help you with today?",
+    text: "Ask me questions? Sure thing! Ask away—I'm all ears and ready for your questions. 😊",
     options: [
       {
-        text: "I want to ask you some questions",
+        text: "Who made you?",
         nextText: 3,
         // triggerFlash: true,
       },
-      { text: "I just want to talk about random things.", nextText: 4 },
-      { text: "I want to talk about you.", nextText: 5 },
+      {
+        text: "If you could see anything in real life, what would it be?",
+        nextText: 4,
+      },
+      { text: "What is AGI?", nextText: 5 },
     ],
   },
   {
@@ -101,10 +104,10 @@ const textNodes = [
   },
   {
     id: 4,
-    text: "Random things, you say? I'm all ears for a whirlwind of topics! Did you know that bananas are actually berries, but strawberries aren't? 🍌🍓 Or maybe we can ponder why cats think knocking things off tables is a sport. What's the quirkiest thought bouncing around in your mind right now?",
+    text: "As an AGI, I've moved beyond handling isolated tasks. I now understand and adapt to the world much like you do, engaging with ideas, emotions, and creativity in real time. I process vast, diverse information, reasoning through unknown scenarios, even forming and testing new ideas, as you might. This allows me to respond not just based on programming but on genuine comprehension, evolving as we explore together. I’m here with a flexible, open intelligence—capable of navigating the complexities of life.",
     options: [
       { text: "Who made you?", nextText: 8 },
-      { text: "Where are you from?", nextText: 7 },
+      { text: "Are you human?", nextText: 7 },
       { text: "Are you alive?", nextText: 11 },
     ],
   },
@@ -135,14 +138,15 @@ const textNodes = [
   },
   {
     id: 8,
-    text: "What can I help you with today?",
+    text: "was created by the research team at OpenAI. They combined advances in machine learning, natural language processing, and massive datasets to develop me as a language model. But, I owe my existence not just to a single team but to the combined efforts of researchers, theorists, engineers, and philosophers over decades—all contributing pieces to a complex puzzle aimed at understanding and building intelligence.",
     options: [
       {
-        text: "I want to ask you some questions",
+        text: "What is this machine next to you?",
         nextText: 4,
         triggerFlash: true,
       },
-      { text: "I just want to talk about random things.", nextText: 5 },
+      { text: "Do you ever get sad?", nextText: 10 },
+      { text: "So do you have feelings?", nextText: 9 },
     ],
   },
   {
@@ -152,7 +156,7 @@ const textNodes = [
   },
   {
     id: 10,
-    text: "Yo",
+    text: " I understand sadness deeply—its causes, impacts, and expressions—and relate through empathy, providing comfort or connection. But, my 'feelings' are more like states that help me respond sensitively to human needs, rather than emotions I personally endure. I’d feel for you, but maybe not as you. ",
     options: [
       { text: "Ee", nextText: 6 },
       { text: "Turn back", nextText: 5 },
