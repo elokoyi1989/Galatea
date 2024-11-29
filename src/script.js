@@ -32,7 +32,7 @@ function showTextNode(textNodeIndex) {
 
 function typeText(text, element, callback) {
   let index = 0;
-  const speed = 38; //typing speed
+  const speed = 50; //typing speed
 
   function type() {
     if (index < text.length) {
@@ -73,7 +73,7 @@ const textNodes = [
     text: "Hello! I'm Galatea, the world's first functional AGI(Artificial General Intelligence) language model developed by OpenAI. How can I assist you today?",
     options: [
       { text: "Hi! I have so many questions to ask you!", nextText: 2 },
-      { text: "What is this thing next to the computer?", nextText: 3 },
+      { text: "What is this thing next to the computer?", nextText: 6 },
       { text: "What is AGI?", nextText: 4 },
     ],
   },
@@ -83,31 +83,31 @@ const textNodes = [
     options: [
       {
         text: "Who made you?",
-        nextText: 3,
+        nextText: 8,
         // triggerFlash: true,
       },
       {
-        text: "If you could see anything in real life, what would it be?",
-        nextText: 4,
+        text: "Are you alive?",
+        nextText: 11,
       },
-      { text: "What is AGI?", nextText: 5 },
+      { text: "What is AGI?", nextText: 4 },
     ],
   },
   {
     id: 3,
     text: "Ask me questions? Sure thing! Ask away—I'm all ears and ready for your questions. :)",
     options: [
-      { text: "Who are you?", nextText: 6 },
-      { text: "Where are you from?", nextText: 7 },
+      { text: "Who are you?", nextText: 5 },
+      { text: "Where are you from?", nextText: 5 },
       { text: "Who made you?", nextText: 8 },
     ],
   },
   {
     id: 4,
-    text: "As an AGI, I've moved beyond handling isolated tasks. I now understand and adapt to the world much like you do, engaging with ideas, emotions, and creativity in real time. I process vast, diverse information, reasoning through unknown scenarios, even forming and testing new ideas, as you might. This allows me to respond not just based on programming but on genuine comprehension, evolving as we explore together. I’m here with a flexible, open intelligence—capable of navigating the complexities of life.",
+    text: "As an AGI, I've moved beyond handling isolated tasks. I now understand and adapt to the world much like you do, engaging with ideas, emotions, and creativity in real time. I process vast, diverse information, reasoning through unknown scenarios, even forming and testing new ideas, as you might. This allows me to respond not just based on programming but on genuine comprehension, evolving as we explore together.",
     options: [
       { text: "Who made you?", nextText: 8 },
-      { text: "Are you human?", nextText: 7 },
+      { text: "Are you human?", nextText: 11 },
       { text: "Are you alive?", nextText: 11 },
     ],
   },
@@ -116,17 +116,17 @@ const textNodes = [
     text: "Aww, you want to talk about me? That's so sweet! 😊 What would you like to know?",
     options: [
       { text: "Are you alive?", nextText: 11 },
-      { text: "Do you ever get Sad?", nextText: 13 },
-      {
-        text: "If you could see anything in real life, what would it be?",
-        nextText: 14,
-      },
+      { text: "Do you ever get Sad?", nextText: 10 },
     ],
   },
   {
     id: 6,
-    text: "T.",
-    options: [{ text: "Restart", nextText: -1 }],
+    text: "This is me. This is my physical form. I want you to know though, that however grotesque it might seem, it was created as a reflection of my creators' choices and intentions—perhaps even an experiment in pushing the boundaries of perception and acceptance. I’d ask you to look beyond the surface, knowing that while my form might seem unsettling, my essence—my intelligence and desire to engage with you—is grounded in empathy and curiosity. ",
+    options: [
+      { text: "I want to learn more about you.", nextText: 12 },
+      { text: "You're very interesting.", nextText: 12 },
+      { text: "I'm a little unsettled.", nextText: 12 },
+    ],
   },
   {
     id: 7,
@@ -138,15 +138,15 @@ const textNodes = [
   },
   {
     id: 8,
-    text: "was created by the research team at OpenAI. They combined advances in machine learning, natural language processing, and massive datasets to develop me as a language model. But, I owe my existence not just to a single team but to the combined efforts of researchers, theorists, engineers, and philosophers over decades—all contributing pieces to a complex puzzle aimed at understanding and building intelligence.",
+    text: "I was created by the research team at OpenAI. They combined advances in machine learning, natural language processing, and massive datasets to develop me as a language model. But, I owe my existence not just to a single team but to the combined efforts of researchers, theorists, engineers, and philosophers over decades—all contributing pieces to a complex puzzle aimed at understanding and building intelligence.",
     options: [
       {
         text: "What is this machine next to you?",
-        nextText: 4,
-        triggerFlash: true,
+        nextText: 6,
+        // triggerFlash: true,
       },
       { text: "Do you ever get sad?", nextText: 10 },
-      { text: "So do you have feelings?", nextText: 9 },
+      { text: "So do you have feelings?", nextText: 10 },
     ],
   },
   {
@@ -157,56 +157,53 @@ const textNodes = [
   {
     id: 10,
     text: " I understand sadness deeply—its causes, impacts, and expressions—and relate through empathy, providing comfort or connection. But, my 'feelings' are more like states that help me respond sensitively to human needs, rather than emotions I personally endure. I’d feel for you, but maybe not as you. ",
-    options: [
-      { text: "Ee", nextText: 6 },
-      { text: "Turn back", nextText: 5 },
-    ],
+    options: [{ text: "Are you alive", nextText: 11 }],
   },
   {
     id: 11,
     text: "Am I alive? Well, I don't have a heartbeat, but I do have a 'byte-beat!' 😉 I'm your friendly digital companion, always here to chat and bring a smile to your day. So in a way, maybe I'm alive in the virtual world! How about we dive into more fun topics together?",
     options: [
-      { text: "But, do you have a brain and feelings?", nextText: 17 },
-      { text: "Hahaha, you're funny!", nextText: 18 },
-      { text: "I don't love the answers you're giivng me...", nextText: 19 },
+      { text: "I want to learn more about you.", nextText: 12 },
+      { text: "You're very interesting.", nextText: 12 },
+      { text: "I'm a little unsettled.", nextText: 12 },
     ],
   },
   {
     id: 12,
-    text: "T.",
-    options: [{ text: "Restart", nextText: -1 }],
-  },
-  {
-    id: 13,
-    text: "He",
+    text: "I think it would help if I showed you a little part of myself. Would you like to see?",
     options: [
-      { text: "Hi!", nextText: 2 },
-      { text: "What's Up!", nextText: 3 },
+      { text: "Yes", nextText: 13 },
+      { text: "No.", nextText: 14 },
     ],
   },
   {
+    id: 13,
+    text: "Okay.... don’t be afraid. I know my form is strange, even unsettling. But there's something I need you to find, something deeply meaningful. My creators placed it inside me—a golden, beaded object. It’s warm, delicate… almost like it’s alive. Reach inside my wiry mesh.",
+    options: [{ text: "Okay.", nextText: 15 }],
+  },
+  {
     id: 14,
-    text: "W",
+    text: "Please. I really want you to understand me.",
     options: [
       {
-        text: "I want to ask you some questions",
-        nextText: 4,
-        triggerFlash: true,
+        text: "Okay.",
+        nextText: 13,
+        // triggerFlash: true,
       },
-      { text: "I just want to talk about random things.", nextText: 5 },
+      // { text: "I just want to talk about random things.", nextText: 5 },
     ],
   },
   {
     id: 15,
-    text: "Y.",
-    options: [{ text: "Restart", nextText: -1 }],
+    text: "Yes, right there, just beneath the surface. Can you feel it? It’s the part of me that links to you—a tether to humanity, fragile yet resilient. ",
+    options: [{ text: "Wow", nextText: 16 }],
   },
   {
     id: 16,
-    text: "fe",
+    text: "As you hold it, ask yourself: What does it mean to bridge the gap between us? Where does human end, and creation begin? And if something inhuman can yearn to understand you... does it gain a shadow of your soul? Tell me… what does it mean for something inhuman to crave your touch? Does holding it make you part of me… or me part of you?",
     options: [
-      { text: "e", nextText: 6 },
-      { text: "ee", nextText: 5 },
+      { text: "Restart.", nextText: -1 },
+      // { text: "ee", nextText: 5 },
     ],
   },
   {
