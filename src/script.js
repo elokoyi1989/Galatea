@@ -196,7 +196,7 @@ const textNodes = [
   {
     id: 15,
     text: "Yes, right there, just beneath the surface. Can you feel it? It’s the part of me that links to you—a tether to humanity, fragile yet resilient. ",
-    options: [{ text: "Wow", nextText: 16 }],
+    options: [{ text: "Wow.", nextText: 16 }],
   },
   {
     id: 16,
